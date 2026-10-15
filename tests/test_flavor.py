@@ -21,7 +21,7 @@ C = PALETTE.colors
 TREE_ROLES = {
     "src": "directory", "run.sh": "executable", "link": "symlink", "broken": "brokenSymlink",
     "pipe": "special", "bundle.tar.gz": "archive", "photo.png": "media", "notes.pdf": "document",
-    "app.py": "source", "old.bak": "temp",
+    "app.py": "source", "old.bak": "temp", "libfoo.a": "temp",
 }
 
 
@@ -46,6 +46,7 @@ def make_tree(root):
     (root / "photo.png").write_bytes(tiny_png())
     (root / "notes.pdf").write_bytes(b"%PDF-1.4\n%%EOF\n")
     (root / "old.bak").write_text("old\n")
+    (root / "libfoo.a").write_bytes(b"!<arch>\n")
     return root
 
 
