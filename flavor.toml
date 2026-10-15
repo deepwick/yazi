@@ -113,5 +113,8 @@ rules = [
 	{ url = "*", is = "exec", fg = "#57A64A", bold = true },
 	{ url = "*", is = "dummy", fg = "#F44747" },
 	{ url = "*/", is = "dummy", fg = "#F44747" },
+	{ url = "*.{c,h,cc,cpp,cxx,hpp,rs,go,py,rb,pl,pm,php,js,mjs,cjs,ts,tsx,jsx,java,kt,scala,swift,cs,fs,hs,ml,ex,exs,erl,clj,lua,nim,zig,d,dart,r,jl,sh,bash,zsh,fish,nu,xsh,ps1,vim,el,html,css,scss,sass,less,vue,svelte,json,yaml,yml,toml,ini,xml,sql,proto,mk,cmake,gradle}", fg = "#DCDCAA" },
+	{ url = "*{Makefile,makefile,Dockerfile,Containerfile,CMakeLists.txt,Cargo.toml,go.mod,package.json,pyproject.toml}", fg = "#DCDCAA" },
+	{ url = "*{~,#,.bak,.crdownload,.dpkg-dist,.dpkg-new,.dpkg-old,.dpkg-tmp,.old,.orig,.part,.rej,.rpmnew,.rpmorig,.rpmsave,.swp,.tmp,.ucf-dist,.ucf-new,.ucf-old,.o,.a}", fg = "#6E7899" },
 	{ url = "*/", fg = "#569CD6", bold = true },
 ]

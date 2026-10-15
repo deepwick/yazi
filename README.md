@@ -37,7 +37,8 @@ dark = "deepwick"
   entirely (it does not merge).
 - File names: directories Blue bold, executables Green bold, symlinks Cyan,
   broken links Red, FIFOs/sockets/devices Gold, archives Rose, media Magenta,
-  documents Orange.
+  documents Orange, source and build files Yellow, temporary, backup and
+  compiled files Muted.
 
 Tested with Yazi 26.5.6.
 

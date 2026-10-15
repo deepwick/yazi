@@ -56,7 +56,7 @@ def assert_role(text, name, role):
     assert style["bold"] == ("bold" in expected.style), (name, role, style)
 
 
-YAZI_ROLES = {name: role for name, role in TREE_ROLES.items() if role not in ("source", "temp")}
+YAZI_ROLES = dict(TREE_ROLES)
 
 
 def name_style(text, name):
