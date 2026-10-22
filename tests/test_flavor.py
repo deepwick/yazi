@@ -133,7 +133,8 @@ def test_yazi_renders_file_roles(tmp_path):
     for kind in ("CONFIG", "DATA", "STATE", "CACHE"):
         env[f"XDG_{kind}_HOME"] = str(tmp_path / kind.lower())
     tree = make_tree(tmp_path / "tree")
-    text = capture(f"yazi {tree}", env, size=(140, 30), wait_for="notes.pdf", timeout=20)
+    # Yazi 26.9 applies [flavor] only once the terminal reports its background (OSC 11).
+    text = capture(f"yazi {tree}", env, size=(140, 30), wait_for="notes.pdf", timeout=20, background=C["background"])
     for name, role in YAZI_ROLES.items():
         style = name_style(text, name)
         expected = PALETTE.files[role]

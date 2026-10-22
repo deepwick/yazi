@@ -39,8 +39,11 @@ dark = "deepwick"
   broken links Red, FIFOs/sockets/devices Gold, archives Rose, media Magenta,
   documents Orange, source and build files Yellow, temporary, backup and
   compiled files Muted.
+- Yazi picks the `dark` or `light` flavor from the background color the
+  terminal reports. A terminal (or detached multiplexer) that doesn't answer
+  that query gets Yazi's default theme.
 
-Tested with Yazi 26.5.6.
+Tested with Yazi 26.9.1.
 
 ## License
 
